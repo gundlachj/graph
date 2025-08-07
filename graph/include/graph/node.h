@@ -11,4 +11,6 @@ typedef struct node {
 
 int addEdge(node_t *node, node_t *nextNode);
 
+int disconnectEdge(node_t *node, node_t *badEdge);
+
 #endif /* end of include guard: NODE_H */

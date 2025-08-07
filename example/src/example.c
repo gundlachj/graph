@@ -9,6 +9,8 @@ int main(int argc, char const *argv[]) {
   node_t *n1 = malloc(sizeof(node_t));
   node_t *n2 = malloc(sizeof(node_t));
   node_t *n3 = malloc(sizeof(node_t));
+  node_t *n4 = malloc(sizeof(node_t));
+
 
   n1->key = 1;
   n2->key = 2;
@@ -20,6 +22,16 @@ int main(int argc, char const *argv[]) {
   for (int i = 0; i < n1->degree; i++) {
     printf("%d\n", n1->edges[i]->key);
   }
+
+  printf("\n");
+
+  int err = disconnectEdge(n1, n4);
+  printf("Error value: %d\n", err);
+
+  for (int i = 0; i < n1->degree; i++) {
+    printf("%d\n", n1->edges[i]->key);
+  }
+
 
   return 0;
 }
