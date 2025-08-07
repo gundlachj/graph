@@ -15,8 +15,11 @@ int main(int argc, char const *argv[]) {
   n3->key = 3;
 
   addEdge(n1, n2);
+  addEdge(n1, n3);
 
-  printf("%d\n", n1->key);
-  printf("%d\n", n1->edges[0]->key);
+  for (int i = 0; i < n1->degree; i++) {
+    printf("%d\n", n1->edges[i]->key);
+  }
+
   return 0;
 }
