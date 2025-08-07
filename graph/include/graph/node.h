@@ -1,8 +1,14 @@
 #ifndef NODE_H
 #define NODE_H
 
-typedef struct {
+#include <stdlib.h>
+
+typedef struct node {
   int key;
+  unsigned int degree; // Number of edges
+  struct node **edges;
 } node_t;
+
+int addEdge(node_t *node, node_t *nextNode);
 
 #endif /* end of include guard: NODE_H */
