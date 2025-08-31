@@ -28,8 +28,8 @@ int disconnectEdge(node_t *node, node_t *badNode) {
     }
   }
 
+  // Bad node was not found
   if (newIdx == node->degree) {
-    // Bad node was not found
     free(newEdges);
     return 1;
   }
