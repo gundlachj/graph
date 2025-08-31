@@ -3,7 +3,6 @@
 
 #include "graph/node.h"
 
-
 void printNode(const node_t *node) {
   printf("Node: ");
   printf("[Key: %d] ", node->key);
@@ -22,7 +21,6 @@ int main(int argc, char const *argv[]) {
   node_t *n2 = malloc(sizeof(node_t));
   node_t *n3 = malloc(sizeof(node_t));
   node_t *n4 = malloc(sizeof(node_t));
-
 
   n1->key = 1;
   n2->key = 2;
